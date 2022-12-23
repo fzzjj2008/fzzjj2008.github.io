@@ -1,8 +1,7 @@
-<img width="180px" style="border-radius: 50%" bor src="https://nodejsred.oss-cn-shanghai.aliyuncs.com/nodejs_roadmap-logo.jpeg?x-oss-process=style/may">
+<img width="180px" style="border-radius: 50%" bor src="jerry.jpg">
 
-# fzzjj2008's Notes
+# 杰瑞同学的学习笔记
 
-- 说明文字
+## 学而时习之，不亦说乎
 
-[开始阅读](<README.md>)
-[GitHub](https://github.com/fzzjj2008/fzzjj2008.github.io)
+[进入知识库](<README.md>)
