@@ -1,7 +1,7 @@
 ## 7.1 概述
 
-- **链接（linking）**：将代码和数据片段合并成一个单一文件的过程，由**链接器（linker）**自动完成
-- **静态链接器(static linker)**：如LD，可以将一组**可重定位目标文件**和命令行为输入，生成可执行二进制文件
+- **链接（linking）**：将代码和数据片段合并成一个单一文件的过程，由 **链接器（linker）** 自动完成
+- **静态链接器(static linker)**：如`LD`，可以将一组**可重定位目标文件**和命令行为输入，生成可执行二进制文件
 - **链接器的主要任务**：符号解析、重定位
   - 符号解析：将每个符号引用与符号定义关联
   - 重定位：将符号定义与内存位置关联，从而重定位这些节。然后修改所有符号引用，使他们指向这个内存位置
@@ -29,7 +29,7 @@ int main() {
 }
 ```
 
-【链接】`gcc -Og -o prog main.c sum.c`（加-v选项可以看到全过程）
+【编译】`gcc -Og -o prog main.c sum.c`（加-v选项可以看到全过程）
 
 【说明】生成二进制文件的过程实际分为三步：编译+汇编+链接
 
@@ -51,27 +51,14 @@ ld -o prog main.o sum.o -dynamic-linker \
 ./prog
 ```
 
-
-
 ## 7.4 可重定位目标文件
 
 - **可重定位目标文件（relocatable object files）**：由代码和数据节（section）组成，每一节都是一个连续的字节序列
-- **ELF格式**：Linux和Unix系统使用可执行可链接格式（Executable and Linkable Format, ELF）
-  - **ELF header**：64字节，包含魔数、ELF文件类型、字节序、版本号、ELF头大小、目标文件类型、机器类型、节头部表的偏移、节头部表中条目的大小和数量
-  - **sections**
-    - .text：已编译程序的机器代码（反汇编：`objdump -s -d main.o`）
-    - .rodata：只读数据，如printf的字符串和switch语句的跳转表
-    - .data：已初始化的全局变量和静态变量（局部变量位于栈中）
-    - .bss：未初始化的全局变量和静态变量，以及初始化为0的全局变量和静态变量（不占空间，只有1个占位符）
-    - .symtab：符号表，定义引用函数和全局变量信息（注意：没有gcc -g也会有.symtab）
-    - .debug：调试用符号表，gcc -g选项开启后才有这张表
-    - ...
-  - **section header table**：描述节属性的表
+- **ELF格式**：Linux和Unix系统使用可执行可链接格式（Executable and Linkable Format, ELF），包含ELF header、sections、section header table三个部分。
 
-![image-20221222075831485](C:\Users\THINKPAD\Desktop\learning\csapp\image-20221222075831485.png)
+1. **ELF header**：64字节，包含魔数、ELF文件类型、字节序、版本号、ELF头大小、目标文件类型、机器类型、节头部表的偏移、节头部表中条目的大小和数量
 
 ```shell
-# #查看ELF header
 # readelf -h main.o
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
@@ -93,11 +80,21 @@ ELF Header:
   Size of section headers:           64 (bytes)
   Number of section headers:         12
   Section header string table index: 9
-  
-# #查看ELF sections
-# readelf -S main.o
-There are 12 section headers, starting at offset 0x130:
+```
 
+2. **sections**：包含程序的各个分段
+  a. `.text`：已编译程序的机器代码（反汇编：`objdump -s -d main.o`）
+  b. `.rodata`：只读数据，如printf的字符串和switch语句的跳转表
+  c. `.data`：已初始化的全局变量和静态变量（局部变量位于栈中）
+  d. `.bss`：未初始化的全局变量和静态变量，以及初始化为0的全局变量和静态变量（不占空间，只有1个占位符）
+  e. `.symtab`：符号表，定义引用函数和全局变量信息（注意：没有gcc -g也会有`.symtab`）
+  f. `.debug`：调试用符号表，-g选项开启后才有这张表
+  g. `.rel.text`和`.rel.data`：重定位信息
+  h. `.line`：行号和.text之间的映射，以-g选项才会得到这张表
+  i. `.strtab`：字符串表，包括`.symtab`和`.debug`的符号表
+
+```shell
+# readelf -S main.o
 Section Headers:
   [Nr] Name              Type             Address           Offset
        Size              EntSize          Flags  Link  Info  Align
@@ -125,12 +122,12 @@ Section Headers:
        0000000000000108  0000000000000018          11     8     8
   [11] .strtab           STRTAB           0000000000000000  00000538
        0000000000000017  0000000000000000           0     0     1
-  
-# #反汇编
+```
+
+通过反汇编，我们可以看到.text字段其实就是main函数的汇编代码：
+
+```shell
 # objdump -s -d main.o
-
-main.o:     file format elf64-x86-64
-
 Contents of section .text:
  0000 554889e5 4883ec10 be020000 00bf0000  UH..H...........
  0010 0000e800 00000089 45fc8b45 fcc9c3    ........E..E...
@@ -161,3 +158,178 @@ Disassembly of section .text:
   1e:   c3                      retq
 ```
 
+3. **section header table**：描述节属性的表
+
+![image-20221222075831485](C:\Users\THINKPAD\Desktop\learning\csapp\image-20221222075831485.png)
+
+```shell  
+# readelf -s main.o
+Symbol table '.symtab' contains 13 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND
+     1: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS main.c
+     2: 0000000000000000     0 SECTION LOCAL  DEFAULT    1
+     3: 0000000000000000     0 SECTION LOCAL  DEFAULT    3
+     4: 0000000000000000     0 SECTION LOCAL  DEFAULT    4
+     5: 0000000000000000     0 SECTION LOCAL  DEFAULT    6
+     6: 0000000000000000     0 SECTION LOCAL  DEFAULT    7
+     7: 0000000000000000     0 SECTION LOCAL  DEFAULT    8
+     8: 0000000000000000     0 SECTION LOCAL  DEFAULT    5
+     9: 0000000000000000     8 OBJECT  GLOBAL DEFAULT    3 array
+    10: 0000000000000000    37 FUNC    GLOBAL DEFAULT    1 main
+    11: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND _GLOBAL_OFFSET_TABLE_
+    12: 0000000000000000     0 NOTYPE  GLOBAL DEFAULT  UND sum
+```
+
+> 对ELF文件的具体解析，详细可参考《程序员的自我修养》一书
+
+## 7.5 符号和符号表
+- 程序的每个符号都被分配到目标文件的某个节
+- 伪节（pseudosection）：
+- ABS：不该重定位的符号
+- UNDEF：未定义的符号，在其他地方定义的符号
+- COMMON：还未被分配位置的未初始化的数据目标（未初始化的全局变量）
+
+
+
+```C++
+int x = 0;
+
+int f() {
+    static int x = 1;
+    return x;
+}
+
+int g() {
+    static int x = 2;
+    return x;
+}
+```
+
+全局符号：对其他模块也可见的符号
+局部符号：支队定义该符号的模块可见
+强符号：函数和已初始化的全局变量
+弱符号：未初始化的全局变量
+
+- 规则1：不允许有多个同名的强符号
+```C++
+//foo1.c
+int main() {
+    return 0;
+}
+//foo2.c
+int main() {
+    return 0;
+}
+```
+
+- 规则2：如果有一个强符号和多个弱符号同名，那么选择强符号
+```C++
+//foo1.c
+#include <stdio.h>
+void f();
+int x = 15213;
+int main() {
+    f();
+    printf("x = %d\n", x);
+    return 0;
+}
+
+//foo2.c
+int x;
+
+void f() {
+    x = 15212;
+}
+```
+规则3：如果有多个弱符号同名，那么从这些弱符号中任意选择一个
+```C++
+//foo1.c
+#include <stdio.h>
+void f();
+int x;
+int main() {
+    x = 15213;
+    f();
+    printf("x = %d\n", x);
+    return 0;
+}
+
+//foo2.c
+int x;
+
+void f() {
+    x = 15212;
+}
+```
+
+```C++
+//foo1.c
+#include <stdio.h>
+void f();
+
+int y = 15212;
+int x = 15213;
+
+int main() {
+    f();
+    printf("x = 0x%x, y = 0x%x\n", x, y);
+    return 0;
+}
+
+//foo2.c
+double x;
+
+void f() {
+    x = -0.0;
+}
+```
+
+### 7.6.2 与静态库链接
+
+```C++
+int addcnt = 0;
+void addvec(int *x, int *y, int *z, n) {
+    int i;
+    addcnt++;
+    for (i = 0; i < n; i++) {
+        z[i] = x[i] + y[i];
+    }
+}
+
+
+int multcnt = 0;
+void multvec(int *x, int *y, int *z, n) {
+    int i;
+    multcnt++;
+    for (i = 0; i < n; i++) {
+        z[i] = x[i] * y[i];
+    }
+}
+
+
+#include <stdio.h>
+#include "vector.h"
+
+int x[2] = {1, 2};
+int y[2] = {3, 4};
+int z[2];
+
+int main() {
+    addvec(x, y, z, 2);
+    printf("z = [%d %d]\n", z[0], z[1]);
+    return 0;
+}
+```
+
+```shell
+gcc -c addvec.c multvec.c
+ar rcs libvector.a addvec.o multvec.o
+gcc -c main.c
+gcc -static -o prog main.o ./libvector.a
+# 或者，-L.告诉链接器在当前目录查找libvector.a
+gcc -c main.c
+gcc -static -o prog main.o -L. -lvector
+```
+
+## 7.7 重定位
