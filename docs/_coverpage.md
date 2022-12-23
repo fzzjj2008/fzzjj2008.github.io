@@ -4,5 +4,5 @@
 
 - 说明文字
 
-[GitHub](<https://github.com/fzzjj2008/fzzjj2008.github.io>)
-[开始阅读](README.md)
+[开始阅读](<README.md>)
+[GitHub](https://github.com/fzzjj2008/fzzjj2008.github.io)

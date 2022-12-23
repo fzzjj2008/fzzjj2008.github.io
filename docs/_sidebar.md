@@ -1,2 +1,1 @@
-- [首页](README.md)
 - [CSAPP](csapp/csapp.md)

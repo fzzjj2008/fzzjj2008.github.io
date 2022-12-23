@@ -10,7 +10,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">加载中...</div>
   <script>
     window.$docsify = {
       search: {
@@ -23,12 +23,19 @@
         countable: true,
         fontsize: '0.9em',
         color: 'rgb(90,90,90)',
-        language: 'chinese'
+        language: 'chinese',
+        isExpected: false //是否显示需要阅读的分钟数
+      },
+      copyCode: {
+        buttonText: {'/': '点击复制'},
       },
       name: 'fzzjj2008\'s Notes',
       repo: 'https://github.com/fzzjj2008/fzzjj2008.github.io',
       coverpage: true,
-      loadSidebar: true
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      onlyCover: true
     }
   </script>
   <!-- Docsify v4 -->
@@ -37,5 +44,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 </body>
 </html>
