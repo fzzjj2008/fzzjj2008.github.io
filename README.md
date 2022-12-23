@@ -15,5 +15,5 @@
 npm install -g docsify-cli
 git clone git@github.com:fzzjj2008/fzzjj2008.github.io.git notes
 cd notes
-docsify serve docs
+npm run serve
 ```

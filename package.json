@@ -1,0 +1,23 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "fzzjj2008.github.io",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "serve": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzzjj2008/fzzjj2008.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fzzjj2008/fzzjj2008.github.io/issues"
+  },
+  "homepage": "https://github.com/fzzjj2008/fzzjj2008.github.io#readme"
+}
