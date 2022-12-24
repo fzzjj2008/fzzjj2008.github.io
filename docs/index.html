@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="shortcut icon" type="image/png" href="https://typora-1316228462.cos.ap-guangzhou.myqcloud.com/typora/favicon.png">
-  <link rel="stylesheet" href="./plugins/katex.min.css" />
   <style>
     code {
       font-family: consolas !important;
@@ -83,6 +82,14 @@
         warning: {'/': 'Warning'},
         attention: {'/': 'Attention'}
       },
+      latex: {
+        inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
+        displayMath  : [['$$', '$$']],               // default
+      },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+      },
       scrollToTop: {
         auto: true,
         text: 'Top',
@@ -105,6 +112,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 下一章节 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script> -->
   <!-- 代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
@@ -112,7 +121,8 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
   <!-- Latex -->
-  <script src="./plugins/docsify-katex.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
   <!-- 返回顶部 -->
   <script src="./plugins/docsify-scroll-to-top.min.js"></script>
   <script src="https://unpkg.com/docsify-tabs@1.5.2/dist/docsify-tabs.min.js"></script>
