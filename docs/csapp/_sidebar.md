@@ -1,4 +1,4 @@
-- **[CSAPP](csapp/README)**
+- [**CSAPP**](csapp/README)
   - [ch02 信息的表示和处理](csapp/ch02)
   - [ch03 程序的机器级表示](csapp/ch03)
   - [ch04 处理器体系结构](csapp/ch04)
