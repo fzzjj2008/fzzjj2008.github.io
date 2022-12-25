@@ -1,4 +1,4 @@
-<img width="180px" style="border-radius: 50%" bor src="https://typora-1316228462.cos.ap-guangzhou.myqcloud.com/typora/jerry.jpg">
+<img width="180px" style="border-radius: 50%" bor src="https://typora-1316228462.cos.ap-guangzhou.myqcloud.com/notes/jerry.jpg">
 
 # **杰瑞同学的学习笔记**
 
