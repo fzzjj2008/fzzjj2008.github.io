@@ -1,6 +1,6 @@
-<img width="180px" style="border-radius: 50%" bor src="https://typora-1316228462.cos.ap-guangzhou.myqcloud.com/notes/jerry.jpg">
+<img width="180px" style="border-radius: 50%" bor src="https://cdn.jsdelivr.net/gh/fzzjj2008/images@main/notesjerry.jpg">
 
-# **杰瑞同学的学习笔记**
+# **杰瑞小哥的学习笔记**
 
 ## 学而时习之，不亦说乎
 
