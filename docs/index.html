@@ -103,7 +103,24 @@
         theme: 'classic', // default
         tabComments: true, // default
         tabHeadings: true // default
-      }
+      },
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span>Powered by ',
+            '<a href="https://docsify.js.org/#/" target="_blank">docsify</a> v',
+            window.Docsify.version,
+            '</span>',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
+          })
+        }
+      ],
     }
   </script>
   <!-- Docsify v4 -->
