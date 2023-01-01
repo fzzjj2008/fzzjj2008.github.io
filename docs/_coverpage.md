@@ -1,4 +1,4 @@
-<img width="180px" style="border-radius: 50%" bor src="http://cdn.docjerry.top/notes/jerry.jpg">
+<img width="180px" style="border-radius: 50%" bor src="https://cdn.docjerry.top/notes/jerry.jpg">
 
 # **杰瑞小哥的学习笔记**
 
