@@ -8,7 +8,7 @@
 
 ## 笔记说明
 
-- **在线笔记**：[http://docjerry.top/](http://docjerry.top/)
+- **在线笔记**：[https://docjerry.top/](https://docjerry.top/)
 
 - **离线笔记**：将仓库下载到本地后，使用[http://localhost:3000](http://localhost:3000)打开，也可以使用`markdown`编辑器打开
 
