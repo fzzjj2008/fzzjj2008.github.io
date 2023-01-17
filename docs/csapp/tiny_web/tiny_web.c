@@ -134,10 +134,10 @@ int parse_uri(char *uri, char *filename, char *cgiargs) {
 
     if (!strstr(uri, "cgi-bin")) {  /* Static content */
         strcpy(cgiargs, "");
-    strcpy(filename, ".");
-    strcat(filename, uri);
-    if (uri[strlen(uri)-1] == '/')
-        strcat(filename, "index.html");
+        strcpy(filename, ".");
+        strcat(filename, uri);
+        if (uri[strlen(uri)-1] == '/')
+            strcat(filename, "index.html");
         return 1;
     }
     else {  /* Dynamic content */
