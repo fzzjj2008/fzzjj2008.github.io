@@ -9,6 +9,16 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="shortcut icon" type="image/png" href="https://cdn.docjerry.top/notes/favicon.png">
   <style>
+     html {
+      /* 灰色滤镜，适用于纪念日 */
+      /* filter: grayscale(100%);
+      filter: progid:DXlmageTransform.Microsoft.Basiclmage(grayscale=1); 
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      -webkit-filter: grayscale(1); */
+    }
     code {
       font-family: consolas !important;
       font-size: 1rem !important;
@@ -45,8 +55,8 @@
       font-size: 2rem !important;
     }
     .scroll-to-top:hover {
-      border-color: #2ab765 !important;
-      background-color: #2ab765 !important;
+      border-color: #42b983 !important;
+      background-color: #42b983 !important;
       color: #fff !important;
       font-size: 2rem !important;
     }
@@ -65,6 +75,7 @@
       notFoundPage: 'notfound.md',
       onlyCover: true,
       subMaxLevel: 3,
+      themeColor: '#42b983',
       search: {
         maxAge: 86400000, //过期时间,单位毫秒
         paths: 'auto',
