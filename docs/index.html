@@ -173,5 +173,16 @@
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts@1.1.0/dist/docsify-plugin-flexible-alerts.min.js"></script>
   <!-- 思维导图 -->
   <script src="//unpkg.com/docsify-mindmap/dist/docsify-mindmap.min.js"></script>
+  <!-- 自定义脚本 -->
+  <script type="text/javascript">
+    function runCode(objname) {
+      var winname = window.open('', "_blank", '');
+      var obj = document.getElementById(objname);
+      winname.document.open('text/html', 'replace');
+      winname.opener = null //防止代码对原始页面进行修改
+      winname.document.write(obj.value);
+      winname.document.close();
+    }
+  </script>
 </body>
 </html>
