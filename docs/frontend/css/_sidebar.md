@@ -1,5 +1,5 @@
 - [**CSS**](frontend/css/README)
-  - [**ch01**](frontend/css/ch01)
+  - [**ch01 基础**](frontend/css/ch01)
   - [**ch02**](frontend/css/ch02)
   - [**ch03**](frontend/css/ch03)
   - [**ch04**](frontend/css/ch04)
