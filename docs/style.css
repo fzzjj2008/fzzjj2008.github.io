@@ -36,6 +36,11 @@ h4 {
 h5 {
     font-size: 1.1rem !important;
 }
+img {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
 .katex {
     font-size: 1.1rem !important;
 }
