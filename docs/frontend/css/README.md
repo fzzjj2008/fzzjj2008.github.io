@@ -6,6 +6,6 @@
 
 - [ch01 CSS简介和基础选择器](frontend/css/ch01)
 - [ch02 复合选择器和CSS特性](frontend/css/ch02)
-- [ch03](frontend/css/ch03)
+- [ch03 CSS权重和盒子模型](frontend/css/ch03)
 - [ch04](frontend/css/ch04)
 - [htmlparser](tools/htmlparser/index.html)
