@@ -8,4 +8,7 @@
 - [ch02 复合选择器和CSS特性](frontend/css/ch02)
 - [ch03 CSS权重和盒子模型](frontend/css/ch03)
 - [ch04 浮动](frontend/css/ch04)
+- [ch05 定位](frontend/css/ch05)
+- [ch06 CSS高级](frontend/css/ch06)
+- [summary](frontend/css/summary)
 - [htmlparser](tools/htmlparser/index.html)
