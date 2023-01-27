@@ -56,6 +56,8 @@ img {
     font-size: 2rem !important;
 }
 .show-html {
+    /* 清除浮动，保证元素正常显示 */
+    overflow: hidden;
     border:1px solid #f8f8f8;
     border-color:#dedcdd #c9c7c8 #c9c7c8;
     padding:0px;
