@@ -9,6 +9,13 @@ html {
     -o-filter: grayscale(100%);
     -webkit-filter: grayscale(1); */
 }
+body {
+    /* CSS3 抗锯齿形 让文字显示的更加清晰 */
+    -webkit-font-smoothing: antialiased;
+}
+button {
+    cursor: pointer;
+}
 code {
     font-family: consolas !important;
     font-size: 1rem !important;
