@@ -6,5 +6,6 @@
   - [**ch05 定位**](frontend/css/ch05)
   - [**ch06 CSS高级**](frontend/css/ch06)
   - [**ch07 示例**](frontend/css/ch07)
+  - [**ch08 CSS3新特性**](frontend/css/ch08)
   - [**summary**](frontend/css/summary)
   - [**htmlparser**](tools/htmlparser/index.html)
