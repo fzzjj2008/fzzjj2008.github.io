@@ -8,22 +8,22 @@
         textarea {
             outline: none;
 	    resize: none;
-            border-color: #42b983;
+            border-color: var(--theme-color)
         }
 
         textarea:focus {
-            border-color: rgb(66, 185, 131);
-            box-shadow: 0 0 8px rgba(66, 185, 131, .75);
-            -moz-box-shadow: 0 0 8px rgba(66, 185, 131, .75);
-            -webkit-box-shadow: 0 0 8px rgba(66, 185, 131, .75);
+            border-color: var(--theme-color);
+            box-shadow: 0 0 8px var(--theme-color);
+            -moz-box-shadow: 0 0 8px var(--theme-color);
+            -webkit-box-shadow: 0 0 8px var(--theme-color);
         }
 
         div button {
             margin-top: 5px;
-            border-color: #42b983;
+            border-color: var(--theme-color);
             border-radius: 4px;
             border-width: 0px;
-            background-color: #42b983;
+            background-color: var(--theme-color);
             width: 80px;
             height: 30px;
             color: #fff;
@@ -34,12 +34,12 @@
         }
 
         div button:hover {
-            background-color: #6fcca2;
+            opacity: 0.85;
         }
 
-        div button:active {
-            background-color: #349469;
-        }
+	div button:active {
+            opacity: 1;
+	}
     </style>
 </head>
 
