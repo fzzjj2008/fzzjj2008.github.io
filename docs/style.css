@@ -63,11 +63,17 @@ img {
     font-size: 2rem !important;
 }
 .show-html {
-    /* 清除浮动，保证元素正常显示 */
-    overflow: hidden;
     border:1px solid #ccc;
     padding: 0px;
     box-shadow: 0 0 3px rgba(0,0,0,.2);
     -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2)
+}
+.show-html::after {
+    /* 清除浮动，保证元素正常显示 */
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
