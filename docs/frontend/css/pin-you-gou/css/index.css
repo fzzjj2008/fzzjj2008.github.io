@@ -1,0 +1,115 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.newsflash .news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+.newsflash .news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+.newsflash .news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.newsflash .news-hd .more {
+    float: right;
+}
+.newsflash .news-hd .more::after {
+    content: "\e920";
+    font-family: 'icomoon';
+}
+.newsflash .news-bd {
+    padding: 5px 15px;
+}
+.newsflash .news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+}
+.newsflash .lifeservice {
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    overflow: hidden;
+}
+.lifeservice ul {
+    width: 252px;
+}
+.lifeservice ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+}
+.lifeservice ul li:nth-child(1) i {
+    background: url(../images/icons.png) no-repeat -17px -15px;
+}
+.lifeservice ul li:nth-child(2) i {
+    background: url(../images/icons.png) no-repeat -80px -15px;
+}
+.lifeservice ul li:nth-child(3) i {
+    background: url(../images/icons.png) no-repeat -141px -15px;
+}
+.lifeservice ul li:nth-child(4) i {
+    background: url(../images/icons.png) no-repeat -206px -15px;
+}
+.lifeservice ul li:nth-child(5) i {
+    background: url(../images/icons.png) no-repeat -17px -86px;
+}
+.lifeservice ul li:nth-child(6) i {
+    background: url(../images/icons.png) no-repeat -80px -86px;
+}
+.lifeservice ul li:nth-child(7) i {
+    background: url(../images/icons.png) no-repeat -141px -86px;
+}
+.lifeservice ul li:nth-child(8) i {
+    background: url(../images/icons.png) no-repeat -206px -86px;
+}
+.lifeservice ul li:nth-child(9) i {
+    background: url(../images/icons.png) no-repeat -17px -156px;
+}
+.lifeservice ul li:nth-child(10) i {
+    background: url(../images/icons.png) no-repeat -80px -156px;
+}
+.lifeservice ul li:nth-child(11) i {
+    background: url(../images/icons.png) no-repeat -141px -156px;
+}
+.lifeservice ul li:nth-child(12) i {
+    background: url(../images/icons.png) no-repeat -206px -156px;
+}
+.lifeservice ul li .minus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 12px;
+    background-color: green;
+}
+.newsflash .bargain {
+    margin-top: 5px;
+}
