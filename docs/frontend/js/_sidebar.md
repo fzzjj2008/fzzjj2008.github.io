@@ -1,4 +1,5 @@
 - [**JavaScript**](frontend/js/README)
   - [**ch01 JavaScript简介**](frontend/js/ch01)
+  - [**ch02 变量和数据类型**](frontend/js/ch02)
   - [**summary**](frontend/js/summary)
   - [**htmlparser**](tools/htmlparser/index.html)
