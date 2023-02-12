@@ -7,5 +7,6 @@
 - [ch01 JavaScript简介](frontend/js/ch01)
 - [ch02 变量和数据类型](frontend/js/ch02)
 - [ch03 运算符和流程控制](frontend/js/ch03)
+- [ch04 数组、函数、作用域](frontend/js/ch04)
 - [summary](frontend/js/summary)
 - [htmlparser](tools/htmlparser/index.html)
