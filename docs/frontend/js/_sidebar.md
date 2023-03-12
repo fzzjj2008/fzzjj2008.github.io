@@ -4,5 +4,6 @@
   - [**ch03 运算符和流程控制**](frontend/js/ch03)
   - [**ch04 数组、函数、作用域**](frontend/js/ch04)
   - [**ch05 对象和复杂类型**](frontend/js/ch05)
+  - [**ch06 Web API**](frontend/js/ch06)
   - [**summary**](frontend/js/summary)
   - [**htmlparser**](tools/htmlparser/index.html)
