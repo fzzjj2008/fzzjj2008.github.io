@@ -51,16 +51,14 @@ img {
 .katex {
     font-size: 1.1rem !important;
 }
-.scroll-to-top {
-    border-color: #bbbbbb !important;
-    color: #bbbbbb !important;
-    font-size: 2rem !important;
+.page_toc {
+    font-size: 14px !important;
 }
-.scroll-to-top:hover {
-    border-color: var(--theme-color) !important;
-    background-color: var(--theme-color) !important;
-    color: #fff !important;
-    font-size: 2rem !important;
+.page_toc div.active {
+    border-left-color: var(--theme-color);
+}
+.page_toc a span:hover {
+    color: var(--theme-color) !important;
 }
 .show-html {
     border:1px solid #ccc;
