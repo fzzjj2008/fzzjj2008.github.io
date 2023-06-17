@@ -48,6 +48,11 @@ img {
     text-align: center;
     margin: auto;
 }
+.sidebar>h1 a {
+    font-family: 'FangSong';
+    font-weight: 700;
+    color: var(--theme-color) !important;
+}
 .katex {
     font-size: 1.1rem !important;
 }
