@@ -51,14 +51,22 @@ img {
 .katex {
     font-size: 1.1rem !important;
 }
-.page_toc {
-    font-size: 14px !important;
-}
 .page_toc div.active {
     border-left-color: var(--theme-color);
 }
-.page_toc a span:hover {
+.page_toc div.active a span {
     color: var(--theme-color) !important;
+}
+.page_toc div a span {
+    font-size: 14px;
+    color: #505d6b !important;
+    font-weight: 400;
+}
+.page_toc .lv2 a span {
+    font-weight: 700;
+}
+.page_toc div a span:hover {
+    text-decoration: underline;
 }
 .show-html {
     border:1px solid #ccc;
