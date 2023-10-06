@@ -1,4 +1,4 @@
-<img width="180px" style="border-radius: 50%" bor src="https://cdn.docjerry.top/notes/jerry.jpg">
+<img width="180px" style="border-radius: 50%" bor src="//fastly.jsdelivr.net/gh/fzzjj2008/fzzjj2008.github.io/docs/images/jerry.jpg">
 
 # **杰瑞小哥的学习笔记**
 

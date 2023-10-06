@@ -1,12 +1,14 @@
 # 杰瑞小哥的学习笔记
 
+![jerry](https://fastly.jsdelivr.net/gh/fzzjj2008/fzzjj2008.github.io/docs/images/jerry.jpg)
+
 > [!TIP]
 >
 > 这里是**杰瑞小哥的学习笔记**，仅供学习交流使用，持续更新中...
 >
 > 本笔记以`docsify`构建，愿意分享知识并收获朋友。如果能够帮助到大家那是求之不得的事了~
 >
-> 有任何疑问或见解，请联系我：fzzjj2008@126.com
+> 有任何疑问或见解，请访问我的主页：[https://github.com/fzzjj2008](https://github.com/fzzjj2008)
 
 ## 笔记说明
 
